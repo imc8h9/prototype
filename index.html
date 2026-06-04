@@ -1,356 +1,219 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8" />
-<title>محرك الجينوم المهاري المتكيّف — MVP Demo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+أريدك أن تعمل كمصمم منتج تعليمي، وخبير قياس فجوات مهارية، ومحلل تعلم، ومصمم خوارزمية Rule-Based AI Prototype.
+نحن نبني بروتوتايب لمنصة اسمها:
+"محرك الجينوم المهاري المتكيّف"
+هدف المنصة:
+تقييم فجوات الموظفين المهارية حسب التخصص من خلال اختبار تفاعلي. المنصة ليست اختبار درجات فقط، بل نظام تشخيص ذكي. كل سؤال يكشف مهارة دقيقة، وكل إجابة تكشف مستوى مختلف من الفجوة. بناءً على كل إجابة، يتم توليد فجوة محددة وتوصية تدريبية مخصصة لها.
+مهم جدًا:
+لا تعطِ إجابات عامة.
+لا تكرر نفس الدورة لكل فجوة.
+لا تجعل التحليل مبنيًا على المجموع فقط.
+كل سؤال يجب أن يكون له 5 اختيارات:
+A
+B
+C
+D
+لا أعلم
+كل اختيار يجب أن يحتوي على:
+1. نص الإجابة
+2. هل هو ممتاز / جيد / ضعيف / خاطئ / لا أعلم
+3. الدرجة: 100 أو 75 أو 50 أو 25 أو 0
+4. الفجوة الناتجة من هذا الاختيار
+5. نوع الفجوة: معرفية / تطبيقية / تحليلية / رقمية / تواصلية / استراتيجية
+6. مستوى الفجوة: لا توجد / بسيطة / متوسطة / عالية
+7. ماذا يسجل النظام في قاعدة البيانات
+8. الدورة أو التوصية المناسبة لهذا الاختيار تحديدًا
+رحلة المستخدم:
+1. صفحة تسجيل الدخول:
+- حقل الاسم
+- حقل البريد الإلكتروني
+- لا يشترط أن يكون البريد حقيقيًا
+- لكن لا يسمح بترك الحقول فارغة
+- زر: تسجيل الدخول
+- بعد الضغط يتم حفظ:
+  user_name
+  email
+  login_time
+2. صفحة الترحيب:
+النص:
+"مرحبًا [اسم المستخدم]، اختر تخصصك لبدء تحليل الجينوم المهاري."
+التخصصات الأربعة:
+1. الموارد البشرية
+2. التسويق الرقمي
+3. المحاسبة والمالية
+4. خدمة العملاء والمبيعات
+عند اختيار التخصص يتم حفظ:
+selected_track
+3. صفحة الأسئلة:
+- لكل تخصص 10 أسئلة فقط.
+- يظهر سؤال واحد في كل صفحة.
+- يظهر رقم السؤال: السؤال 1 من 10.
+- المستخدم يختار إجابة واحدة.
+- زر التالي.
+- زر السابق.
+- في السؤال العاشر يظهر زر: تسليم نهائي.
+- لا يمكن الانتقال بدون اختيار إجابة.
+- كل إجابة يتم حفظها فورًا.
+4. المطلوب منك الآن:
+أنشئ محتوى كاملًا للأربع تخصصات.
+لكل تخصص أنشئ 10 أسئلة.
+كل سؤال يجب أن يكون مبنيًا على موقف عملي واقعي، وليس سؤالًا نظريًا سطحيًا.
+كل سؤال يقيس مهارة مختلفة.
+لا تكرر نفس المهارة مرتين إلا لو كان القياس من زاوية مختلفة.
+5. صيغة إخراج كل سؤال يجب أن تكون هكذا بالضبط:
+التخصص:
+اسم التخصص
+السؤال رقم:
+1 من 10
+المهارة المقاسة:
+اسم المهارة الدقيقة
+نص السؤال:
+اكتب السؤال كسيناريو عملي واضح.
+الاختيارات والتحليل:
+A)
+نص الإجابة:
+التصنيف:
+الدرجة:
+التحليل:
+الفجوة الناتجة:
+نوع الفجوة:
+مستوى الفجوة:
+ما الذي يحفظه النظام:
+الدورة المقترحة:
+سبب اقتراح الدورة:
+B)
+نص الإجابة:
+التصنيف:
+الدرجة:
+التحليل:
+الفجوة الناتجة:
+نوع الفجوة:
+مستوى الفجوة:
+ما الذي يحفظه النظام:
+الدورة المقترحة:
+سبب اقتراح الدورة:
+C)
+نص الإجابة:
+التصنيف:
+الدرجة:
+التحليل:
+الفجوة الناتجة:
+نوع الفجوة:
+مستوى الفجوة:
+ما الذي يحفظه النظام:
+الدورة المقترحة:
+سبب اقتراح الدورة:
+D)
+نص الإجابة:
+التصنيف:
+الدرجة:
+التحليل:
+الفجوة الناتجة:
+نوع الفجوة:
+مستوى الفجوة:
+ما الذي يحفظه النظام:
+الدورة المقترحة:
+سبب اقتراح الدورة:
+لا أعلم)
+نص الإجابة: لا أعلم
+التصنيف: لا معرفة كافية
+الدرجة: 0
+التحليل:
+الفجوة الناتجة:
+نوع الفجوة:
+مستوى الفجوة:
+ما الذي يحفظه النظام:
+الدورة المقترحة:
+سبب اقتراح الدورة:
+6. منطق الخوارزمية:
+لكل إجابة يتم إنشاء سجل بهذا الشكل:
+{
+  "question_id": "",
+  "track": "",
+  "skill": "",
+  "selected_answer": "",
+  "score": "",
+  "gap_name": "",
+  "gap_type": "",
+  "gap_level": "",
+  "recommended_course": "",
+  "recommendation_reason": ""
+}
+7. بعد التسليم النهائي:
+النظام يحسب:
+- مؤشر الجاهزية العام = متوسط درجات الأسئلة العشرة.
+- عدد الفجوات العالية.
+- عدد الفجوات المتوسطة.
+- عدد الفجوات البسيطة.
+- أكثر 3 مهارات تحتاج تطوير.
+- المسار التدريبي المقترح بالترتيب.
+8. تصنيف الجاهزية:
+85 إلى 100 = جاهزية عالية
+70 إلى 84 = جاهزية جيدة مع فجوات بسيطة
+50 إلى 69 = جاهزية متوسطة وتحتاج تطوير
+أقل من 50 = فجوات عالية وتحتاج مسار تطوير مكثف
+9. التخصص الأول: الموارد البشرية
+اكتب 10 أسئلة تغطي:
+- تحليل الاحتياج الوظيفي
+- الاستقطاب والتوظيف
+- المقابلات
+- إدارة الأداء
+- تحليل الاحتياج التدريبي
+- تطوير الموظفين
+- HR Analytics
+- HRMS
+- تخطيط القوى العاملة
+- الامتثال والسياسات
+10. التخصص الثاني: التسويق الرقمي
+اكتب 10 أسئلة تغطي:
+- تحليل الجمهور المستهدف
+- بناء الرسائل التسويقية
+- إدارة الحملات الإعلانية
+- SEO
+- Google Analytics
+- مؤشرات الأداء KPI
+- الشبكات الاجتماعية
+- البريد الإلكتروني
+- الذكاء الاصطناعي في التسويق
+- تحسين معدل التحويل CRO
+11. التخصص الثالث: المحاسبة والمالية
+اكتب 10 أسئلة تغطي:
+- قراءة القوائم المالية
+- التدفقات النقدية
+- تحليل الربحية
+- إعداد الميزانية
+- التنبؤ المالي
+- إدارة المخاطر
+- تحليل التكاليف
+- الالتزام المالي
+- Excel المالي
+- إعداد التقارير المالية للإدارة
+12. التخصص الرابع: خدمة العملاء والمبيعات
+اكتب 10 أسئلة تغطي:
+- فهم احتياج العميل
+- التعامل مع الاعتراضات
+- البيع الاستشاري
+- التواصل
+- CRM
+- إدارة الشكاوى
+- تجربة العميل
+- الإقناع
+- المتابعة بعد البيع
+- قياس رضا العملاء
+13. مهم جدًا في التوصيات:
+لكل فجوة اقترح دورة مختلفة قدر الإمكان.
+مثال:
+إذا الفجوة في SEO → دورة SEO Fundamentals
+إذا الفجوة في Google Analytics → دورة Google Analytics 4
+إذا الفجوة في HR Analytics → دورة HR Analytics
+إذا الفجوة في المقابلات → دورة Behavioral Interviewing
+إذا الفجوة في التدفقات النقدية → دورة Cash Flow Management
+إذا الفجوة في Excel المالي → دورة Financial Modeling in Excel
+إذا الفجوة في CRM → دورة CRM Fundamentals
+إذا الفجوة في الاعتراضات البيعية → دورة Handling Sales Objections
+14. بعد الانتهاء من الأسئلة:
+أنشئ أيضًا صفحة التقرير النهائي بصياغة جاهزة، مثل:
+"بناءً على إجاباتك، يظهر أن مؤشر جاهزيتك المهنية هو [النسبة]%. تم رصد [عدد] فجوات عالية و[عدد] فجوات متوسطة. أكثر المهارات التي تحتاج إلى تطوير هي: [المهارات]. نقترح البدء بالمسار التدريبي التالي حسب الأولوية."
+15. أخرج النتيجة كاملة ومنظمة، ولا تختصر.
+أريد كل التخصصات الأربعة، كل تخصص 10 أسئلة، وكل سؤال 5 إجابات، وكل إجابة بتحليلها الكامل.
 
-<style>
-:root{
-  --bg-primary:#0A0F1C;
-  --bg-secondary:#0F1624;
-  --bg-card:rgba(20,28,45,.7);
-  --neon-blue:#00E0FF;
-  --neon-purple:#AA00FF;
-  --neon-cyan:#00FFF0;
-  --neon-pink:#FF006E;
-  --text-primary:#fff;
-  --text-secondary:#B4C7E7;
-  --text-muted:#7A8BA3;
-  --btn-primary-bg:linear-gradient(135deg,#00E0FF 0%,#AA00FF 100%);
-  --btn-primary-glow:0 0 20px rgba(0,224,255,.6);
-  --btn-secondary-border:#00E0FF;
-  --grid-line:rgba(0,224,255,.1);
-}
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  background:radial-gradient(circle at top,#151b30 0%,#050814 60%,#02030a 100%);
-  color:var(--text-primary);
-  direction:rtl;
-}
-button{font-family:inherit;cursor:pointer}
-.app{
-  min-height:100vh;
-  background-image:
-    linear-gradient(90deg,var(--grid-line) 1px,transparent 1px),
-    linear-gradient(180deg,var(--grid-line) 1px,transparent 1px);
-  background-size:80px 80px;
-}
-.neon-orb{
-  position:fixed;
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  filter:blur(60px);
-  opacity:.35;
-  pointer-events:none;
-  z-index:0;
-  animation:floatOrb 26s ease-in-out infinite alternate;
-}
-.orb-1{background:var(--neon-blue);top:-60px;right:10%}
-.orb-2{background:var(--neon-purple);bottom:-80px;left:5%}
-.orb-3{background:var(--neon-cyan);top:40%;left:40%}
-@keyframes floatOrb{
-  0%{transform:translate3d(0,0,0) scale(1)}
-  50%{transform:translate3d(20px,-20px,0) scale(1.05)}
-  100%{transform:translate3d(-25px,25px,0) scale(.95)}
-}
-header{
-  position:sticky;
-  top:0;
-  z-index:10;
-  backdrop-filter:blur(18px);
-  background:linear-gradient(to bottom,rgba(5,8,20,.95),rgba(5,8,20,.7));
-  border-bottom:1px solid var(--grid-line);
-}
-.nav{
-  max-width:1200px;
-  margin:0 auto;
-  padding:.75rem 1.5rem;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1.5rem;
-}
-.brand{display:flex;align-items:center;gap:.6rem}
-.logo{
-  width:32px;height:32px;border-radius:10px;
-  border:1px solid var(--neon-blue);
-  box-shadow:0 0 12px rgba(0,224,255,.4);
-  display:flex;align-items:center;justify-content:center;
-}
-.brand-text{display:flex;flex-direction:column;font-size:.85rem}
-.brand-text span:last-child{font-size:.75rem;color:var(--text-secondary)}
-.nav-links{display:flex;gap:.55rem;flex-wrap:wrap;justify-content:flex-end}
-.nav-links button{
-  background:transparent;
-  border:none;
-  color:var(--text-secondary);
-  padding:.35rem .7rem;
-  border-radius:999px;
-}
-.nav-links button:hover{color:var(--neon-blue)}
-.primary-nav-btn{
-  background:var(--btn-primary-bg)!important;
-  color:#fff!important;
-  box-shadow:var(--btn-primary-glow);
-}
-main{max-width:1200px;margin:0 auto;padding:1.5rem;position:relative;z-index:1}
-section{display:none;padding:2rem 0 4rem;min-height:calc(100vh - 80px)}
-section.active-section{display:block}
-.section-header{margin-bottom:1.2rem}
-.section-header h2{margin:0 0 .5rem;font-size:1.6rem}
-.section-header p{margin:0;color:var(--text-secondary);font-size:.9rem}
-.card{
-  background:rgba(15,22,36,.92);
-  border:1px solid rgba(0,224,255,.25);
-  border-radius:18px;
-  box-shadow:0 0 18px rgba(0,0,0,.55);
-  padding:1.2rem 1.4rem;
-}
-.btn-primary,.btn-small{
-  background:var(--btn-primary-bg);
-  color:#fff;
-  border:none;
-  border-radius:999px;
-  box-shadow:var(--btn-primary-glow);
-  font-weight:700;
-}
-.btn-primary{padding:.7rem 1.6rem}
-.btn-small{padding:.5rem 1.2rem;font-size:.85rem}
-.btn-outline{
-  background:transparent;
-  color:var(--neon-blue);
-  border-radius:999px;
-  padding:.65rem 1.2rem;
-  border:1px solid var(--btn-secondary-border);
-}
-input{
-  width:100%;
-  padding:.7rem;
-  border-radius:10px;
-  border:1px solid rgba(0,224,255,.35);
-  background:rgba(15,22,36,.8);
-  color:#fff;
-  outline:none;
-}
-.form-group{display:flex;flex-direction:column;gap:.3rem;margin-bottom:.8rem}
-label{color:var(--text-secondary);font-size:.85rem}
-.grid-4{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:1rem;
-}
-@media(max-width:900px){.grid-4{grid-template-columns:1fr}}
-.track-card{
-  min-height:170px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-}
-.track-card h3{margin:.2rem 0;color:var(--neon-cyan)}
-.track-card p{color:var(--text-secondary);font-size:.85rem;line-height:1.7}
-.answer-btn{
-  width:100%;
-  text-align:right;
-  border:1px solid rgba(0,224,255,.35);
-  background:rgba(10,16,28,.75);
-  color:var(--text-secondary);
-  border-radius:14px;
-  padding:.85rem 1rem;
-  margin:.45rem 0;
-}
-.answer-btn.selected{
-  background:var(--btn-primary-bg);
-  color:#fff;
-  box-shadow:var(--btn-primary-glow);
-}
-.dashboard-grid{
-  display:grid;
-  grid-template-columns:1.3fr 1fr;
-  gap:1rem;
-}
-@media(max-width:900px){.dashboard-grid{grid-template-columns:1fr}}
-.circle{
-  width:105px;height:105px;border-radius:50%;
-  border:2px solid rgba(0,224,255,.6);
-  box-shadow:0 0 18px rgba(0,224,255,.6);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  background:radial-gradient(circle at top,rgba(0,224,255,.3),rgba(4,12,24,.95));
-}
-.circle .v{font-size:1.55rem;font-weight:900;color:var(--neon-cyan)}
-.circle .t{font-size:.75rem;color:var(--text-secondary)}
-.list{list-style:none;padding:0;margin:0}
-.list li{
-  display:flex;
-  justify-content:space-between;
-  gap:.8rem;
-  padding:.55rem .3rem;
-  border-bottom:1px dashed rgba(0,224,255,.15);
-  color:var(--text-secondary);
-  font-size:.85rem;
-}
-.tag{
-  font-size:.75rem;
-  padding:.2rem .6rem;
-  border-radius:999px;
-  border:1px solid rgba(255,0,110,.6);
-  background:rgba(255,0,110,.12);
-  color:#FF8AC2;
-  white-space:nowrap;
-}
-.progress-bar{
-  height:8px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  overflow:hidden;
-  margin-top:.8rem;
-}
-.progress-fill{
-  height:100%;
-  background:var(--btn-primary-bg);
-  width:0%;
-}
-</style>
-</head>
-
-<body>
-<div class="app">
-<div class="neon-orb orb-1"></div>
-<div class="neon-orb orb-2"></div>
-<div class="neon-orb orb-3"></div>
-
-<header>
-<nav class="nav">
-  <div class="brand">
-    <div class="logo">🧬</div>
-    <div class="brand-text">
-      <span>محرك الجينوم المهاري المتكيّف</span>
-      <span>Adaptive Skills Engine — Impact Prototype</span>
-    </div>
-  </div>
-  <div class="nav-links">
-    <button data-target="login">الدخول</button>
-    <button data-target="tracks">اختيار التخصص</button>
-    <button data-target="assessment">التقييم</button>
-    <button data-target="assessmentReport">تقرير الجينوم</button>
-    <button class="primary-nav-btn" data-target="tracks">ابدأ</button>
-  </div>
-</nav>
-</header>
-
-<main>
-
-<section id="login" class="active-section">
-  <div class="section-header">
-    <h2>تسجيل الدخول</h2>
-    <p>أدخل أي اسم وأي بريد للبدء في تجربة التقييم.</p>
-  </div>
-  <div class="card">
-    <div class="form-group">
-      <label>الاسم</label>
-      <input id="userName" placeholder="مثال: محمد" />
-    </div>
-    <div class="form-group">
-      <label>البريد الإلكتروني</label>
-      <input id="userEmail" placeholder="example@email.com" />
-    </div>
-    <button class="btn-primary" onclick="loginUser()">تسجيل الدخول</button>
-  </div>
-</section>
-
-<section id="tracks">
-  <div class="section-header">
-    <h2 id="welcomeTitle">اختر تخصصك</h2>
-    <p>سيتم توليد اختبار مهاري مختلف حسب التخصص، مع تحليل فجوات وتوصيات مخصصة.</p>
-  </div>
-
-  <div class="grid-4">
-    <div class="card track-card">
-      <div>
-        <h3>الموارد البشرية</h3>
-        <p>تحليل الاحتياج، التوظيف، الأداء، التدريب، HR Analytics، والامتثال.</p>
-      </div>
-      <button class="btn-small" onclick="startTrack('hr')">ابدأ التقييم</button>
-    </div>
-
-    <div class="card track-card">
-      <div>
-        <h3>التسويق الرقمي</h3>
-        <p>الجمهور، الحملات، SEO، التحليلات، المحتوى، AI Marketing وCRO.</p>
-      </div>
-      <button class="btn-small" onclick="startTrack('marketing')">ابدأ التقييم</button>
-    </div>
-
-    <div class="card track-card">
-      <div>
-        <h3>المحاسبة والمالية</h3>
-        <p>القوائم المالية، التدفقات النقدية، الميزانية، التنبؤ، المخاطر وExcel المالي.</p>
-      </div>
-      <button class="btn-small" onclick="startTrack('finance')">ابدأ التقييم</button>
-    </div>
-
-    <div class="card track-card">
-      <div>
-        <h3>خدمة العملاء والمبيعات</h3>
-        <p>فهم العميل، الاعتراضات، البيع الاستشاري، CRM، الشكاوى وتجربة العميل.</p>
-      </div>
-      <button class="btn-small" onclick="startTrack('sales')">ابدأ التقييم</button>
-    </div>
-  </div>
-</section>
-
-<section id="assessment">
-  <div class="section-header">
-    <h2 id="assessmentTitle">التقييم المهاري</h2>
-    <p id="assessmentProgress">السؤال 1 من 10</p>
-    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-  </div>
-
-  <div class="card">
-    <h3 id="questionSkill" style="color:var(--neon-cyan);margin-top:0"></h3>
-    <h2 id="questionText" style="line-height:1.7"></h2>
-    <div id="answersBox"></div>
-
-    <div style="display:flex;justify-content:space-between;margin-top:1.2rem;gap:.7rem">
-      <button class="btn-outline" id="prevBtn">السابق</button>
-      <button class="btn-small" id="nextBtn">التالي</button>
-    </div>
-  </div>
-</section>
-
-<section id="assessmentReport">
-  <div class="section-header">
-    <h2>تقرير الجينوم المهاري</h2>
-    <p>تحليل تفصيلي للفجوات، مؤشر الجاهزية، والجينوم التخصصي.</p>
-  </div>
-
-  <div class="dashboard-grid">
-    <div class="card">
-      <h3>مؤشر الجاهزية المهنية</h3>
-      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap">
-        <div class="circle">
-          <div class="v" id="finalScore">0%</div>
-          <div class="t">جاهزية</div>
-        </div>
-        <div id="summaryText" style="color:var(--text-secondary);line-height:1.8;max-width:520px"></div>
-      </div>
-
-      <h3 style="margin-top:1.5rem">لوحة الجينوم التخصصي</h3>
-      <ul class="list" id="genomeList"></ul>
-    </div>
-
-    <div class="card">
-      <h3>الفجوات المكتشفة</h3>
-      <ul class="list" id="gapsList"></ul>
-
-      <h3 style="margin-top:1.3rem">المسار التدريبي المقترح</h3>
-      <ul class="list" id="coursesList"></ul>
-    </div>
-  </div>
-</section>
+Now work on it, DEEP THINK everything work like a god  DEEP research everytjong make sure everything is perfect 
