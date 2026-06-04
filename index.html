@@ -1,219 +1,1968 @@
-أريدك أن تعمل كمصمم منتج تعليمي، وخبير قياس فجوات مهارية، ومحلل تعلم، ومصمم خوارزمية Rule-Based AI Prototype.
-نحن نبني بروتوتايب لمنصة اسمها:
-"محرك الجينوم المهاري المتكيّف"
-هدف المنصة:
-تقييم فجوات الموظفين المهارية حسب التخصص من خلال اختبار تفاعلي. المنصة ليست اختبار درجات فقط، بل نظام تشخيص ذكي. كل سؤال يكشف مهارة دقيقة، وكل إجابة تكشف مستوى مختلف من الفجوة. بناءً على كل إجابة، يتم توليد فجوة محددة وتوصية تدريبية مخصصة لها.
-مهم جدًا:
-لا تعطِ إجابات عامة.
-لا تكرر نفس الدورة لكل فجوة.
-لا تجعل التحليل مبنيًا على المجموع فقط.
-كل سؤال يجب أن يكون له 5 اختيارات:
-A
-B
-C
-D
-لا أعلم
-كل اختيار يجب أن يحتوي على:
-1. نص الإجابة
-2. هل هو ممتاز / جيد / ضعيف / خاطئ / لا أعلم
-3. الدرجة: 100 أو 75 أو 50 أو 25 أو 0
-4. الفجوة الناتجة من هذا الاختيار
-5. نوع الفجوة: معرفية / تطبيقية / تحليلية / رقمية / تواصلية / استراتيجية
-6. مستوى الفجوة: لا توجد / بسيطة / متوسطة / عالية
-7. ماذا يسجل النظام في قاعدة البيانات
-8. الدورة أو التوصية المناسبة لهذا الاختيار تحديدًا
-رحلة المستخدم:
-1. صفحة تسجيل الدخول:
-- حقل الاسم
-- حقل البريد الإلكتروني
-- لا يشترط أن يكون البريد حقيقيًا
-- لكن لا يسمح بترك الحقول فارغة
-- زر: تسجيل الدخول
-- بعد الضغط يتم حفظ:
-  user_name
-  email
-  login_time
-2. صفحة الترحيب:
-النص:
-"مرحبًا [اسم المستخدم]، اختر تخصصك لبدء تحليل الجينوم المهاري."
-التخصصات الأربعة:
-1. الموارد البشرية
-2. التسويق الرقمي
-3. المحاسبة والمالية
-4. خدمة العملاء والمبيعات
-عند اختيار التخصص يتم حفظ:
-selected_track
-3. صفحة الأسئلة:
-- لكل تخصص 10 أسئلة فقط.
-- يظهر سؤال واحد في كل صفحة.
-- يظهر رقم السؤال: السؤال 1 من 10.
-- المستخدم يختار إجابة واحدة.
-- زر التالي.
-- زر السابق.
-- في السؤال العاشر يظهر زر: تسليم نهائي.
-- لا يمكن الانتقال بدون اختيار إجابة.
-- كل إجابة يتم حفظها فورًا.
-4. المطلوب منك الآن:
-أنشئ محتوى كاملًا للأربع تخصصات.
-لكل تخصص أنشئ 10 أسئلة.
-كل سؤال يجب أن يكون مبنيًا على موقف عملي واقعي، وليس سؤالًا نظريًا سطحيًا.
-كل سؤال يقيس مهارة مختلفة.
-لا تكرر نفس المهارة مرتين إلا لو كان القياس من زاوية مختلفة.
-5. صيغة إخراج كل سؤال يجب أن تكون هكذا بالضبط:
-التخصص:
-اسم التخصص
-السؤال رقم:
-1 من 10
-المهارة المقاسة:
-اسم المهارة الدقيقة
-نص السؤال:
-اكتب السؤال كسيناريو عملي واضح.
-الاختيارات والتحليل:
-A)
-نص الإجابة:
-التصنيف:
-الدرجة:
-التحليل:
-الفجوة الناتجة:
-نوع الفجوة:
-مستوى الفجوة:
-ما الذي يحفظه النظام:
-الدورة المقترحة:
-سبب اقتراح الدورة:
-B)
-نص الإجابة:
-التصنيف:
-الدرجة:
-التحليل:
-الفجوة الناتجة:
-نوع الفجوة:
-مستوى الفجوة:
-ما الذي يحفظه النظام:
-الدورة المقترحة:
-سبب اقتراح الدورة:
-C)
-نص الإجابة:
-التصنيف:
-الدرجة:
-التحليل:
-الفجوة الناتجة:
-نوع الفجوة:
-مستوى الفجوة:
-ما الذي يحفظه النظام:
-الدورة المقترحة:
-سبب اقتراح الدورة:
-D)
-نص الإجابة:
-التصنيف:
-الدرجة:
-التحليل:
-الفجوة الناتجة:
-نوع الفجوة:
-مستوى الفجوة:
-ما الذي يحفظه النظام:
-الدورة المقترحة:
-سبب اقتراح الدورة:
-لا أعلم)
-نص الإجابة: لا أعلم
-التصنيف: لا معرفة كافية
-الدرجة: 0
-التحليل:
-الفجوة الناتجة:
-نوع الفجوة:
-مستوى الفجوة:
-ما الذي يحفظه النظام:
-الدورة المقترحة:
-سبب اقتراح الدورة:
-6. منطق الخوارزمية:
-لكل إجابة يتم إنشاء سجل بهذا الشكل:
-{
-  "question_id": "",
-  "track": "",
-  "skill": "",
-  "selected_answer": "",
-  "score": "",
-  "gap_name": "",
-  "gap_type": "",
-  "gap_level": "",
-  "recommended_course": "",
-  "recommendation_reason": ""
-}
-7. بعد التسليم النهائي:
-النظام يحسب:
-- مؤشر الجاهزية العام = متوسط درجات الأسئلة العشرة.
-- عدد الفجوات العالية.
-- عدد الفجوات المتوسطة.
-- عدد الفجوات البسيطة.
-- أكثر 3 مهارات تحتاج تطوير.
-- المسار التدريبي المقترح بالترتيب.
-8. تصنيف الجاهزية:
-85 إلى 100 = جاهزية عالية
-70 إلى 84 = جاهزية جيدة مع فجوات بسيطة
-50 إلى 69 = جاهزية متوسطة وتحتاج تطوير
-أقل من 50 = فجوات عالية وتحتاج مسار تطوير مكثف
-9. التخصص الأول: الموارد البشرية
-اكتب 10 أسئلة تغطي:
-- تحليل الاحتياج الوظيفي
-- الاستقطاب والتوظيف
-- المقابلات
-- إدارة الأداء
-- تحليل الاحتياج التدريبي
-- تطوير الموظفين
-- HR Analytics
-- HRMS
-- تخطيط القوى العاملة
-- الامتثال والسياسات
-10. التخصص الثاني: التسويق الرقمي
-اكتب 10 أسئلة تغطي:
-- تحليل الجمهور المستهدف
-- بناء الرسائل التسويقية
-- إدارة الحملات الإعلانية
-- SEO
-- Google Analytics
-- مؤشرات الأداء KPI
-- الشبكات الاجتماعية
-- البريد الإلكتروني
-- الذكاء الاصطناعي في التسويق
-- تحسين معدل التحويل CRO
-11. التخصص الثالث: المحاسبة والمالية
-اكتب 10 أسئلة تغطي:
-- قراءة القوائم المالية
-- التدفقات النقدية
-- تحليل الربحية
-- إعداد الميزانية
-- التنبؤ المالي
-- إدارة المخاطر
-- تحليل التكاليف
-- الالتزام المالي
-- Excel المالي
-- إعداد التقارير المالية للإدارة
-12. التخصص الرابع: خدمة العملاء والمبيعات
-اكتب 10 أسئلة تغطي:
-- فهم احتياج العميل
-- التعامل مع الاعتراضات
-- البيع الاستشاري
-- التواصل
-- CRM
-- إدارة الشكاوى
-- تجربة العميل
-- الإقناع
-- المتابعة بعد البيع
-- قياس رضا العملاء
-13. مهم جدًا في التوصيات:
-لكل فجوة اقترح دورة مختلفة قدر الإمكان.
-مثال:
-إذا الفجوة في SEO → دورة SEO Fundamentals
-إذا الفجوة في Google Analytics → دورة Google Analytics 4
-إذا الفجوة في HR Analytics → دورة HR Analytics
-إذا الفجوة في المقابلات → دورة Behavioral Interviewing
-إذا الفجوة في التدفقات النقدية → دورة Cash Flow Management
-إذا الفجوة في Excel المالي → دورة Financial Modeling in Excel
-إذا الفجوة في CRM → دورة CRM Fundamentals
-إذا الفجوة في الاعتراضات البيعية → دورة Handling Sales Objections
-14. بعد الانتهاء من الأسئلة:
-أنشئ أيضًا صفحة التقرير النهائي بصياغة جاهزة، مثل:
-"بناءً على إجاباتك، يظهر أن مؤشر جاهزيتك المهنية هو [النسبة]%. تم رصد [عدد] فجوات عالية و[عدد] فجوات متوسطة. أكثر المهارات التي تحتاج إلى تطوير هي: [المهارات]. نقترح البدء بالمسار التدريبي التالي حسب الأولوية."
-15. أخرج النتيجة كاملة ومنظمة، ولا تختصر.
-أريد كل التخصصات الأربعة، كل تخصص 10 أسئلة، وكل سؤال 5 إجابات، وكل إجابة بتحليلها الكامل.
-
-Now work on it, DEEP THINK everything work like a god  DEEP research everytjong make sure everything is perfect 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>محرك الجينوم المهاري المتكيّف</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- يمكنك لاحقاً إضافة رابط خط Tajawal أو Cairo من Google Fonts -->
+  <style>
+    :root {
+      /* Background Colors */
+      --bg-primary: #0A0F1C;
+      --bg-secondary: #0F1624;
+      --bg-card: rgba(20, 28, 45, 0.7);
+      --bg-card-hover: rgba(30, 40, 60, 0.85);
+      /* Neon Accent Colors */
+      --neon-blue: #00E0FF;
+      --neon-purple: #AA00FF;
+      --neon-cyan: #00FFF0;
+      --neon-pink: #FF006E;
+      /* Typography Colors */
+      --text-primary: #FFFFFF;
+      --text-secondary: #B4C7E7;
+      --text-muted: #7A8BA3;
+      /* Button Colors */
+      --btn-primary-bg: linear-gradient(135deg, #00E0FF 0%, #AA00FF 100%);
+      --btn-primary-glow: 0 0 20px rgba(0, 224, 255, 0.6);
+      --btn-secondary-bg: transparent;
+      --btn-secondary-border: #00E0FF;
+      /* Grid & Borders */
+      --grid-line: rgba(0, 224, 255, 0.1);
+      --border-glow: rgba(170, 0, 255, 0.3);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #151b30 0%, #050814 60%, #02030a 100%);
+      color: var(--text-primary);
+      direction: rtl;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+    /* Global layout */
+    .app {
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      background-image: 
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(180deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 80px 80px;
+    }
+    /* Neon particles (simple) */
+    .neon-orb {
+      position: fixed;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.35;
+      pointer-events: none;
+      z-index: 0;
+      animation: floatOrb 26s ease-in-out infinite alternate;
+    }
+    .orb-1 {
+      background: var(--neon-blue);
+      top: -60px;
+      right: 10%;
+      animation-duration: 28s;
+    }
+    .orb-2 {
+      background: var(--neon-purple);
+      bottom: -80px;
+      left: 5%;
+      animation-duration: 24s;
+    }
+    .orb-3 {
+      background: var(--neon-cyan);
+      top: 40%;
+      left: 40%;
+      animation-duration: 32s;
+    }
+    .neon-orb.neon-paused {
+      animation-play-state: paused;
+      opacity: 0.18;
+    }
+    @keyframes floatOrb {
+      0% {
+        transform: translate3d(0, 0, 0) scale(1);
+        opacity: 0.28;
+      }
+      50% {
+        transform: translate3d(20px, -20px, 0) scale(1.05);
+        opacity: 0.4;
+      }
+      100% {
+        transform: translate3d(-25px, 25px, 0) scale(0.95);
+        opacity: 0.3;
+      }
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(5, 8, 20, 0.95), rgba(5, 8, 20, 0.7));
+      border-bottom: 1px solid var(--grid-line);
+    }
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      border: 1px solid var(--neon-blue);
+      box-shadow: 0 0 12px rgba(0, 224, 255, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--neon-cyan);
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.85rem;
+    }
+    .brand-text span:first-child {
+      font-weight: 600;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .nav-links button,
+    .nav-links a {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      transition: 0.2s;
+      font-size: 0.9rem;
+    }
+    .nav-links button:hover,
+    .nav-links a:hover {
+      color: var(--neon-blue);
+    }
+    .nav-links .primary-nav-btn {
+      background: var(--btn-primary-bg);
+      color: #fff;
+      padding: 0.4rem 1rem;
+      box-shadow: var(--btn-primary-glow);
+      border-radius: 999px;
+      border: none;
+      font-size: 0.9rem;
+    }
+    .nav-links .secondary-nav-btn {
+      border: 1px solid var(--btn-secondary-border);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      background: var(--btn-secondary-bg);
+      color: var(--neon-blue);
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    section {
+      display: none;
+      padding: 2rem 0 4rem;
+      min-height: calc(100vh - 80px);
+    }
+    section.active-section {
+      display: block;
+    }
+    /* ========== Landing Page (Page 1) ========== */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 2rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+    .hero-text h1 {
+      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      line-height: 1.4;
+      margin: 0 0 1rem;
+    }
+    .hero-text h1 span {
+      display: block;
+    }
+    .hero-highlight {
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hero-subtitle {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      line-height: 1.8;
+      max-width: 34rem;
+    }
+    @media (max-width: 900px) {
+      .hero-subtitle {
+        margin: 0 auto;
+      }
+    }
+    .hero-actions {
+      margin-top: 1.6rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    @media (max-width: 900px) {
+      .hero-actions {
+        justify-content: center;
+      }
+    }
+    .btn-primary {
+      background: var(--btn-primary-bg);
+      color: #fff;
+      border-radius: 999px;
+      padding: 0.7rem 1.6rem;
+      border: none;
+      box-shadow: var(--btn-primary-glow);
+      font-size: 0.95rem;
+      font-weight: 600;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: "";
+      position: absolute;
+      inset-inline-start: -40%;
+      top: 0;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.4), transparent);
+      transform: skewX(-20deg);
+      opacity: 0;
+      transition: 0.4s;
+    }
+    .btn-primary:hover::after {
+      opacity: 1;
+      transform: translateX(260%) skewX(-20deg);
+    }
+    .btn-secondary {
+      background: var(--btn-secondary-bg);
+      color: var(--neon-blue);
+      border-radius: 999px;
+      padding: 0.7rem 1.6rem;
+      border: 1px solid var(--btn-secondary-border);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .hero-visual {
+      position: relative;
+      padding: 1.5rem;
+      border-radius: 24px;
+      background: radial-gradient(circle at top, rgba(0, 224, 255, 0.25), rgba(10, 15, 28, 0.95));
+      box-shadow: 0 0 26px rgba(0, 224, 255, 0.25);
+      overflow: hidden;
+    }
+    .hero-brain {
+      width: 120px;
+      height: 120px;
+      border-radius: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-brain::before,
+    .hero-brain::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      border: 1px dashed rgba(0, 224, 255, 0.6);
+      inset: 10px;
+      animation: rotate 14s linear infinite;
+    }
+    .hero-brain::after {
+      inset: 22px;
+      border-color: rgba(170, 0, 255, 0.6);
+      animation-direction: reverse;
+    }
+    .hero-brain-icon {
+      font-size: 2.4rem;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 12px rgba(0, 255, 240, 0.9);
+    }
+    @keyframes rotate {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .hero-badges {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .badge-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    .badge-pill {
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 224, 255, 0.35);
+      background: rgba(4, 12, 24, 0.8);
+      white-space: nowrap;
+    }
+    .badge-pill span {
+      color: var(--neon-cyan);
+      margin-inline-start: 0.3rem;
+    }
+    .hero-hints {
+      margin-top: 1.2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .hero-hints strong {
+      color: var(--neon-purple);
+    }
+    /* Features section */
+    .features {
+      margin-top: 3rem;
+    }
+    .section-title {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+    }
+    @media (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .feature-card {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 1.3rem;
+      border: 1px solid rgba(0, 224, 255, 0.18);
+      box-shadow: 0 0 14px rgba(0, 0, 0, 0.4);
+      transition: 0.2s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top, rgba(0, 224, 255, 0.22), transparent 60%);
+      opacity: 0;
+      transition: 0.4s;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(0, 224, 255, 0.5);
+      background: var(--bg-card-hover);
+    }
+    .feature-card:hover::before {
+      opacity: 1;
+    }
+    .feature-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: radial-gradient(circle at top, rgba(0, 224, 255, 0.5), rgba(3, 8, 20, 0.9));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.7rem;
+      box-shadow: 0 0 14px rgba(0, 224, 255, 0.6);
+      font-size: 1.1rem;
+    }
+    .feature-title {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .feature-desc {
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+      line-height: 1.7;
+    }
+    /* Stats */
+    .stats {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    @media (max-width: 900px) {
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 600px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+    .stat-card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 1rem;
+      border: 1px solid rgba(0, 224, 255, 0.15);
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::after {
+      content: "";
+      position: absolute;
+      inset-inline: 0;
+      bottom: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--neon-blue), var(--neon-purple));
+      opacity: 0.7;
+    }
+    .stat-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+      color: var(--neon-cyan);
+    }
+    .stat-label {
+      font-size: 0.8rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 1.2rem 0;
+      border-top: 1px solid var(--grid-line);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+    }
+    .footer-links a:hover {
+      color: var(--neon-blue);
+    }
+    /* ========== Other Sections (Skeletons) ========== */
+    .section-header {
+      margin-bottom: 1.5rem;
+    }
+    .section-header h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.6rem;
+    }
+    .section-header p {
+      margin: 0;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    /* Profile creation simple layout */
+    .form-card {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      border-radius: 18px;
+      background: rgba(15, 22, 36, 0.9);
+      border: 1px solid rgba(0, 224, 255, 0.25);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+    }
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .form-group {
+      flex: 1 1 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      font-size: 0.85rem;
+    }
+    label {
+      color: var(--text-secondary);
+    }
+    input, select, textarea {
+      padding: 0.6rem 0.7rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 224, 255, 0.35);
+      background: rgba(15, 22, 36, 0.8);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.86rem;
+      outline: none;
+      transition: 0.2s;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--neon-blue);
+      box-shadow: 0 0 14px rgba(0, 224, 255, 0.5);
+    }
+    .stepper {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+    }
+    .step {
+      flex: 1;
+      position: relative;
+      text-align: center;
+    }
+    .step:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      inset-inline-start: -50%;
+      width: 100%;
+      height: 2px;
+      background: rgba(0, 224, 255, 0.25);
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+    .step-circle {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      margin: 0 auto 0.3rem;
+      border: 2px solid var(--step-inactive, #3A4A5F);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      background: rgba(4, 12, 24, 0.9);
+    }
+    .step-active .step-circle {
+      border-color: #00E0FF;
+      box-shadow: 0 0 14px rgba(0, 224, 255, 0.8);
+    }
+    .step-complete .step-circle {
+      border-color: #00FF88;
+      background: rgba(0, 255, 136, 0.1);
+    }
+    .step-label {
+      font-size: 0.78rem;
+    }
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.7rem;
+      margin-top: 1rem;
+    }
+    .btn-outline {
+      background: transparent;
+      border-radius: 999px;
+      border: 1px solid var(--btn-secondary-border);
+      color: var(--neon-blue);
+      padding: 0.5rem 1.2rem;
+      font-size: 0.85rem;
+    }
+    .btn-small {
+      padding: 0.5rem 1.2rem;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--btn-primary-bg);
+      color: #fff;
+      box-shadow: var(--btn-primary-glow);
+    }
+    /* Simple skeletons for other pages */
+    .placeholder-box {
+      border-radius: 18px;
+      padding: 1.5rem;
+      background: rgba(15, 22, 36, 0.9);
+      border: 1px dashed rgba(0, 224, 255, 0.4);
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+    /* Helper: small pills */
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+    .chip {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(170, 0, 255, 0.8);
+      background: rgba(170, 0, 255, 0.15);
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+    /* Small screen fixes */
+    @media (max-width: 600px) {
+      .nav {
+        padding-inline: 1rem;
+      }
+    }
+    /* ========== NEW: Assessment Interactive Demo ========== */
+    .assessment-demo {
+      margin-top: 1.5rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    }
+    @media (max-width: 900px) {
+      .assessment-demo {
+        grid-template-columns: 1fr;
+      }
+    }
+    .assessment-card,
+    .assessment-summary {
+      background: rgba(15, 22, 36, 0.95);
+      border-radius: 18px;
+      padding: 1.2rem 1.4rem;
+      border: 1px solid rgba(0, 224, 255, 0.25);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+      font-size: 0.88rem;
+    }
+    .assessment-card h3,
+    .assessment-summary h3 {
+      margin-top: 0;
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+    }
+    .skill-slider {
+      margin-bottom: 0.8rem;
+    }
+    .skill-slider label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.2rem;
+      font-size: 0.85rem;
+    }
+    .skill-slider span.value {
+      color: var(--neon-cyan);
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .skill-slider input[type="range"] {
+      width: 100%;
+      accent-color: var(--neon-blue);
+    }
+    .assessment-hint {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+    }
+    .summary-pill {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.4rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 224, 255, 0.3);
+      margin-bottom: 0.4rem;
+      font-size: 0.8rem;
+    }
+    .summary-pill span.score {
+      color: var(--neon-cyan);
+      font-weight: 600;
+    }
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(0, 255, 136, 0.12);
+      border: 1px solid rgba(0, 255, 136, 0.6);
+      color: #8BFFC4;
+      font-size: 0.75rem;
+    }
+    .assessment-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+    }
+    .btn-ghost {
+      background: transparent;
+      border-radius: 999px;
+      border: 1px dashed rgba(0, 224, 255, 0.4);
+      color: var(--text-secondary);
+      padding: 0.45rem 1rem;
+      font-size: 0.8rem;
+    }
+    /* ========== NEW: Dashboard / Radar ========== */
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .dashboard-main,
+    .dashboard-side {
+      background: rgba(15, 22, 36, 0.95);
+      border-radius: 20px;
+      padding: 1.4rem 1.6rem;
+      border: 1px solid rgba(0, 224, 255, 0.25);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+    }
+    .dashboard-main {
+      position: relative;
+      overflow: hidden;
+    }
+    .dashboard-main::after {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top, rgba(0, 224, 255, 0.16), transparent 60%);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    .dashboard-main-inner {
+      position: relative;
+      z-index: 1;
+    }
+    #skillsRadar {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    .dashboard-readiness {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.88rem;
+    }
+    .readiness-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 224, 255, 0.6);
+      box-shadow: 0 0 18px rgba(0, 224, 255, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, rgba(0, 224, 255, 0.3), rgba(4, 12, 24, 0.95));
+      position: relative;
+      overflow: hidden;
+    }
+    .readiness-circle::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 50%;
+      border: 1px dashed rgba(0, 224, 255, 0.5);
+      animation: rotate 12s linear infinite;
+    }
+    .readiness-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--neon-cyan);
+      z-index: 1;
+    }
+    .readiness-label {
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      z-index: 1;
+    }
+    .dashboard-side h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+    .dashboard-side h4 {
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+    .skills-list,
+    .gaps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.85rem;
+    }
+    .skills-list li,
+    .gaps-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.35rem 0.3rem;
+      border-bottom: 1px dashed rgba(0, 224, 255, 0.12);
+    }
+    .skills-list li:last-child,
+    .gaps-list li:last-child {
+      border-bottom: none;
+    }
+    .skill-badge-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .skill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--neon-blue);
+      box-shadow: 0 0 8px rgba(0, 224, 255, 0.8);
+    }
+    .skill-score {
+      color: var(--neon-cyan);
+      font-weight: 600;
+      font-size: 0.8rem;
+    }
+    .gap-tag {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(255, 0, 110, 0.12);
+      border: 1px solid rgba(255, 0, 110, 0.6);
+      color: #FF8AC2;
+    }
+    .dashboard-note {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    /* ========== NEW: Market Demo ========== */
+    .market-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.4rem;
+    }
+    @media (max-width: 900px) {
+      .market-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .market-panel {
+      background: rgba(15, 22, 36, 0.95);
+      border-radius: 18px;
+      padding: 1.3rem 1.4rem;
+      border: 1px solid rgba(0, 224, 255, 0.25);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+      font-size: 0.88rem;
+    }
+    .market-panel h3 {
+      margin-top: 0;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+    }
+    .market-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.6rem;
+    }
+    .market-card {
+      border-radius: 14px;
+      padding: 0.75rem 0.8rem;
+      background: rgba(10, 16, 28, 0.95);
+      border: 1px solid rgba(0, 224, 255, 0.18);
+      position: relative;
+      overflow: hidden;
+    }
+    .market-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top, rgba(0, 224, 255, 0.15), transparent 60%);
+      opacity: 0;
+      transition: 0.35s;
+    }
+    .market-card:hover::before {
+      opacity: 1;
+    }
+    .market-card-title {
+      font-size: 0.9rem;
+      margin-bottom: 0.15rem;
+    }
+    .market-card-meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .market-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+      margin-bottom: 0.4rem;
+    }
+    .market-tag {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 224, 255, 0.35);
+      color: var(--text-secondary);
+    }
+    .market-hint {
+      margin-top: 0.7rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .skills-basket-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+      font-size: 0.84rem;
+    }
+    .skills-basket-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.3rem 0.2rem;
+      border-bottom: 1px dashed rgba(0, 224, 255, 0.12);
+    }
+    .skills-basket-list li:last-child {
+      border-bottom: none;
+    }
+    .basket-pill {
+      padding: 0.15rem 0.5rem;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(170, 0, 255, 0.6);
+      background: rgba(170, 0, 255, 0.15);
+      color: var(--text-secondary);
+    }
+    /* ========== NEW: Settings Demo ========== */
+    .settings-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.3rem;
+      margin-top: 1rem;
+    }
+    @media (max-width: 900px) {
+      .settings-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+    .settings-card {
+      background: rgba(15, 22, 36, 0.95);
+      border-radius: 18px;
+      padding: 1.3rem 1.4rem;
+      border: 1px solid rgba(0, 224, 255, 0.25);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+      font-size: 0.88rem;
+    }
+    .settings-card h3 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
+    .toggle-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.45rem 0.3rem;
+      border-bottom: 1px dashed rgba(0, 224, 255, 0.15);
+    }
+    .toggle-row:last-child {
+      border-bottom: none;
+    }
+    .toggle-label {
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+    }
+    .toggle-description {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+    .switch {
+      position: relative;
+      width: 42px;
+      height: 22px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider-switch {
+      position: absolute;
+      cursor: pointer;
+      inset: 0;
+      background: #354055;
+      border-radius: 999px;
+      transition: 0.2s;
+    }
+    .slider-switch:before {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background-color: #fff;
+      left: 3px;
+      top: 3px;
+      transition: 0.2s;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    }
+    .switch input:checked + .slider-switch {
+      background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+      box-shadow: 0 0 16px rgba(0, 224, 255, 0.6);
+    }
+    .switch input:checked + .slider-switch:before {
+      transform: translateX(18px);
+    }
+    .settings-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.7rem;
+    }
+    body.reduced-motion * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <!-- Neon glows -->
+  <div class="neon-orb orb-1"></div>
+  <div class="neon-orb orb-2"></div>
+  <div class="neon-orb orb-3"></div>
+  <header>
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo">🧬</div>
+        <div class="brand-text">
+          <span>محرك الجينوم المهاري المتكيّف</span>
+          <span style="font-size:0.75rem;color:var(--text-secondary);">
+            Adaptive Skills Engine Prototype
+          </span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <button data-target="landing">الرئيسية</button>
+        <button data-target="profile">الملف الشخصي</button>
+        <button data-target="assessment">التقييم</button>
+        <button data-target="dashboard">لوحة الجينوم</button>
+        <button data-target="pathway">المسار التدريبي</button>
+        <button data-target="market">سوق المهارات</button>
+        <button data-target="settings">الإعدادات</button>
+        <button class="secondary-nav-btn">تسجيل الدخول</button>
+        <button class="primary-nav-btn" data-target="profile">ابدأ رحلتك المهارية</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- ========== Page 1: Landing ========== -->
+    <section id="landing" class="active-section">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>
+            <span>استكشف <span class="hero-highlight">جينومك المهاري</span></span>
+            <span>وحدّد مستقبلك المهني بذكاء</span>
+          </h1>
+          <p class="hero-subtitle">
+            منصة متقدمة تعتمد على الذكاء الاصطناعي لتحليل مهاراتك الحالية،
+            تحديد الفجوات المهارية، وبناء مسار تعلّم مخصص يواكب احتياجات
+            سوق العمل السعودي والعالمي.
+          </p>
+          <div class="hero-actions">
+            <button class="btn-primary" data-target="assessment">
+              ابدأ التقييم المجاني
+            </button>
+            <button class="btn-secondary">
+              اكتشف المزيد
+            </button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-brain">
+            <div class="hero-brain-icon">🧠</div>
+          </div>
+          <div class="hero-badges">
+            <div class="badge-row">
+              <div class="badge-pill">
+                تقييم مهاري <span>ذكي</span>
+              </div>
+              <div class="badge-pill">
+                مسارات <span>مخصّصة</span>
+              </div>
+            </div>
+            <div class="badge-row">
+              <div class="badge-pill">
+                تحديث كل <span>شهرين</span>
+              </div>
+              <div class="badge-pill">
+                مهيأ لـ<span>رؤية 2030</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-hints">
+            <strong>محرك الجينوم المهاري المتكيّف</strong> يبني لك
+            ملفًا مهاريًا ديناميكيًا، يتحدث مع تغيّر سوق العمل،
+            ويقترح عليك أفضل خطوات التعلّم التالية.
+          </div>
+        </div>
+      </div>
+      <section class="features">
+        <h2 class="section-title">لماذا هذه المنصّة مختلفة؟</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title">تقييم ذكي ومتطور</div>
+            <div class="feature-desc">
+              اختبارات تفاعلية تقيس مهاراتك التحليلية، التقنية، والقيادية
+              باستخدام نماذج تعلّم آلي مخصصة.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🧭</div>
+            <div class="feature-title">مسارات تعلّم مخصّصة</div>
+            <div class="feature-desc">
+              خوارزميات ذكية تصمم لك خارطة طريق تدريبية فريدة
+              بناءً على أهدافك المهنية وفجواتك المهارية.
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-title">تحديث مستمر ومرن</div>
+            <div class="feature-desc">
+              نظام يتطور كل شهرين بناءً على بيانات سوق العمل الحية
+              ومسارك التدريبي الشخصي، ليبقيك دائمًا في دائرة الطلب.
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="stats">
+        <div class="stat-card">
+          <div class="stat-value" data-counter="15000">+15,000</div>
+          <div class="stat-label">مستخدم نشط</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-counter="500">+500</div>
+          <div class="stat-label">مسار مهاري متخصص</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-counter="98">98%</div>
+          <div class="stat-label">معدل الرضا</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" data-counter="200">+200</div>
+          <div class="stat-label">شريك توظيف</div>
+        </div>
+      </section>
+      <footer>
+        <div>
+          © 2025 محرك الجينوم المهاري المتكيّف | جميع الحقوق محفوظة
+        </div>
+        <div class="footer-links">
+          <a href="#">سياسة الخصوصية</a>
+          <a href="#">شروط الاستخدام</a>
+          <a href="#">اتصل بنا</a>
+        </div>
+      </footer>
+    </section>
+    <!-- ========== Page 2: Profile Creation ========== -->
+    <section id="profile">
+      <div class="section-header">
+        <h2>صفحة بناء الملف الشخصي</h2>
+        <p>ابدأ بتعريف خلفيتك التعليمية والمهنية لنصمّم لك مسارًا تدريبيًا يناسبك.</p>
+      </div>
+      <div class="form-card">
+        <div class="stepper">
+          <div class="step step-active">
+            <div class="step-circle">1</div>
+            <div class="step-label">المعلومات الأساسية</div>
+          </div>
+          <div class="step">
+            <div class="step-circle">2</div>
+            <div class="step-label">الخلفية التعليمية</div>
+          </div>
+          <div class="step">
+            <div class="step-circle">3</div>
+            <div class="step-label">الخبرة المهنية</div>
+          </div>
+          <div class="step">
+            <div class="step-circle">4</div>
+            <div class="step-label">الأهداف المهنية</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم الكامل</label>
+            <input type="text" placeholder="أدخل اسمك الكامل" />
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" placeholder="example@email.com" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>كلمة المرور</label>
+            <input type="password" placeholder="يجب أن تحتوي على 8 أحرف على الأقل" />
+          </div>
+          <div class="form-group">
+            <label>تأكيد كلمة المرور</label>
+            <input type="password" placeholder="أعد إدخال كلمة المرور" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>المستوى التعليمي</label>
+            <select>
+              <option>ثانوية عامة</option>
+              <option>دبلوم</option>
+              <option selected>بكالوريوس</option>
+              <option>ماجستير</option>
+              <option>دكتوراه</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>التخصص الدراسي</label>
+            <input type="text" placeholder="مثال: علوم الحاسب، إدارة الأعمال..." />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>الحالة الوظيفية</label>
+            <select>
+              <option>موظف حالياً</option>
+              <option>باحث عن عمل</option>
+              <option>طالب</option>
+              <option>عمل حر</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>المسمى الوظيفي المستهدف</label>
+            <input type="text" placeholder="مثال: محلل بيانات، مهندس برمجيات..." />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>أهدافك المهنية (كلمات مفتاحية)</label>
+          <div class="chip-row">
+            <span class="chip">الانتقال إلى مجال جديد</span>
+            <span class="chip">تطوير مهارات تقنية متقدمة</span>
+            <span class="chip">تحسين المهارات القيادية</span>
+            <span class="chip">الحصول على شهادات احترافية</span>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn-outline">السابق</button>
+          <button class="btn-small">إنهاء وحفظ الملف</button>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Page 3: Assessment (Interactive Demo) ========== -->
+    <section id="assessment">
+      <div class="section-header">
+        <h2>التقييم المهاري التفاعلي</h2>
+        <p>مجموعة من الأسئلة والسيناريوهات القصيرة لتكوين صورة دقيقة عن جينومك المهاري.</p>
+      </div>
+      <div class="placeholder-box">
+        <p><strong>مثال بطاقة سؤال:</strong></p>
+        <p><strong>السؤال 1 من 25 – التفكير التحليلي</strong></p>
+        <p>
+          شركة تقنية تواجه انخفاضاً في المبيعات بنسبة 30% خلال الربع الأخير. ما هي الخطوة الأولى الأكثر منطقية لتحليل المشكلة؟
+        </p>
+        <ul>
+          <li>تحليل بيانات المبيعات الشهرية وتحديد متى بدأ الانخفاض</li>
+          <li>إطلاق حملة تسويقية فورية لزيادة المبيعات</li>
+          <li>تخفيض الأسعار بنسبة 20% لجذب العملاء</li>
+          <li>الاستعانة بشركة استشارات خارجية</li>
+        </ul>
+        <p style="margin-top:1rem;">
+          لاحقًا سيتم تحويل هذه المنطقة إلى مكوّن تفاعلي ذكي (اختيار، مؤقت، تقدم، سيناريوهات، سحب وإفلات… إلخ), وبناء على اجابة المستخدم سيتم تقييمه من عدة نواحي
+        </p>
+      </div>
+      <!-- NEW: judges interactive mini-assessment -->
+      <div class="assessment-demo">
+        <div class="assessment-card">
+          <h3>🔍 مثال تفاعلي للتقييم </h3>
+          <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:0.8rem;">
+            حرّك المؤشرات لتقدير قوة مهاراتك، ثم اضغط <strong>تحديث جينومي المهاري</strong> لمشاهدة
+            الرسم الراداري في لوحة الجينوم وسوق المهارات المقترح.
+          </p>
+          <div class="skill-slider">
+            <label>
+              <span>التفكير التحليلي</span>
+              <span class="value" id="val-logic">65</span>
+            </label>
+            <input id="skill-logic" type="range" min="0" max="100" value="65">
+          </div>
+          <div class="skill-slider">
+            <label>
+              <span>التواصل</span>
+              <span class="value" id="val-comm">70</span>
+            </label>
+            <input id="skill-comm" type="range" min="0" max="100" value="70">
+          </div>
+          <div class="skill-slider">
+            <label>
+              <span>القيادة والتأثير</span>
+              <span class="value" id="val-lead">55</span>
+            </label>
+            <input id="skill-lead" type="range" min="0" max="100" value="55">
+          </div>
+          <div class="skill-slider">
+            <label>
+              <span>المهارات التقنية (Digital)</span>
+              <span class="value" id="val-tech">60</span>
+            </label>
+            <input id="skill-tech" type="range" min="0" max="100" value="60">
+          </div>
+          <div class="skill-slider">
+            <label>
+              <span>التكيّف والمرونة</span>
+              <span class="value" id="val-adapt">75</span>
+            </label>
+            <input id="skill-adapt" type="range" min="0" max="100" value="75">
+          </div>
+          <div class="skill-slider">
+            <label>
+              <span>التعلّم المستمر</span>
+              <span class="value" id="val-learn">80</span>
+            </label>
+            <input id="skill-learn" type="range" min="0" max="100" value="80">
+          </div>
+          <div class="assessment-actions">
+            <button class="btn-small" id="btn-save-assessment">تحديث جينومي المهاري</button>
+            <button class="btn-ghost" data-target="dashboard">عرض لوحة الجينوم مباشرة</button>
+          </div>
+          <div class="assessment-hint">
+            لا حاجة لتسجيل الدخول — هذا مجرد نموذج تفاعلي يستعرض فكرة المحرك للحكام.
+          </div>
+        </div>
+        <div class="assessment-summary">
+          <h3>📊 ملخص سريع</h3>
+          <div id="assessment-summary-list">
+            <!-- Filled by JS -->
+          </div>
+          <div style="margin-top:0.7rem;">
+            <span class="badge-status">
+              ✓ الجينوم محدث
+            </span>
+          </div>
+          <p class="assessment-hint">
+            بعد الضغط على زر التحديث، يتم إرسال هذه القيم افتراضياً إلى
+            <strong>لوحة الجينوم</strong> لرسم مخطط راداري ديناميكي،
+            وإلى <strong>سوق المهارات</strong> لاقتراح مهارات لسد الفجوات.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Page 4: Skills Genome Dashboard (Interactive) ========== -->
+    <section id="dashboard">
+      <div class="section-header">
+        <h2>لوحة الجينوم المهاري</h2>
+        <p>نظرة شاملة على نقاط قوتك والفجوات والجاهزية للأدوار الوظيفية المختلفة.</p>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dashboard-main">
+          <div class="dashboard-main-inner">
+            <canvas id="skillsRadar" width="420" height="320"></canvas>
+            <div class="dashboard-readiness">
+              <div class="readiness-circle">
+                <div class="readiness-value" id="readinessValue">0</div>
+                <div class="readiness-label">جاهزية</div>
+              </div>
+              <div style="max-width:260px;">
+                <div style="font-size:0.9rem;margin-bottom:0.2rem;">
+                  جاهزيتك الحالية للأدوار الرقمية / التحليلية
+                </div>
+                <div class="dashboard-note">
+                  يتم حساب النسبة تلقائيًا من متوسط أبعاد الجينوم الستة (تحليلي، تواصل، قيادة، تقنية، تكيّف، تعلّم مستمر).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-side">
+          <h3>ملخص الجينوم المهاري</h3>
+          <ul class="skills-list" id="skillsSummaryList"></ul>
+          <h4>الفجوات المقترحة (Targets)</h4>
+          <ul class="gaps-list" id="gapsList"></ul>
+          <div class="dashboard-note">
+            يمكن للحكام تعديل قيم التقييم من صفحة <strong>التقييم</strong> وملاحظة
+            تأثيرها المباشر على الرسم الراداري والفجوات المقترحة هنا.
+          </div>
+          <div style="margin-top:0.9rem;display:flex;flex-wrap:wrap;gap:0.5rem;">
+            <button class="btn-small" data-target="market">انتقل إلى سوق المهارات</button>
+            <button class="btn-ghost" data-target="assessment">تعديل التقييم</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Page 5: Learning Pathway (Skeleton) ========== -->
+    <section id="pathway">
+      <div class="section-header">
+        <h2>مسار التعلّم الشخصي</h2>
+        <p>خارطة طريق متجددة تنقلك من وضعك الحالي إلى هدفك المهني خطوة بخطوة.</p>
+      </div>
+      <div class="placeholder-box">
+        <p>مثال مسار "من محلل بيانات مبتدئ إلى محلل بيانات أول":</p>
+        <pre style="white-space:pre-wrap;font-size:0.8rem;">
+المرحلة 1: الأساسيات ✓ مكتملة
+- مقدمة في علم البيانات
+- أساسيات Excel للتحليل
+- مبادئ الإحصاء
+- التفكير التحليلي
+المرحلة 2: الأدوات الأساسية (قيد التنفيذ)
+- SQL للمبتدئين
+- Python أساسيات (جارٍ الآن)
+- تصور البيانات - Tableau (مقفل)
+- مشروع تطبيقي 1 (مقفل)
+        </pre>
+        <p>يمكن تحويل هذه القائمة لاحقًا إلى مخطط تفاعلي بعُقد (Nodes) متصلة.</p>
+      </div>
+    </section>
+    <!-- ========== Page 6: Future Skills Marketplace (Interactive Demo) ========== -->
+    <section id="market">
+      <div class="section-header">
+        <h2>رؤى سوق العمل والمهارات</h2>
+        <p>استكشف الطلب على المهارات والوظائف المستقبلية، وتعرّف على موقعك التنافسي.</p>
+      </div>
+      <div class="market-layout">
+        <div class="market-panel">
+          <h3>🔮 مهارات مقترحة حسب جينومك الحالي</h3>
+          <p style="font-size:0.82rem;color:var(--text-secondary);margin-bottom:0.4rem;">
+            هنا يعرض التدريبات والدورات المقترح اخذها
+            (تم اقتراحها اعتمادا على التحليل والتقييم لملف المسجل )
+          </p>
+          <div class="market-cards" id="marketRecommendations">
+            <!-- Filled by JS -->
+          </div>
+          <p class="market-hint">
+            .
+          </p>
+        </div>
+        <div class="market-panel">
+          <h3>🧺 سلة مهاراتي</h3>
+          <p style="font-size:0.8rem;color:var(--text-secondary);">
+            عند الضغط على زر <strong>"أضف إلى مساري"</strong> سيتم جمع المهارات هنا كمثال
+            على بناء سلة تعلم شخصية يمكن لاحقاً ربطها بمسار تدريبي حقيقي.
+          </p>
+          <ul class="skills-basket-list" id="skillsBasketList">
+            <!-- Filled by JS -->
+          </ul>
+          <p class="market-hint">
+            هذا مجرد نموذج تفاعلي للحكام، لا يحتاج إلى تسجيل دخول أو حفظ حقيقي للبيانات.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ========== Page 7: Settings & Privacy (Interactive Demo) ========== -->
+    <section id="settings">
+      <div class="section-header">
+        <h2>الإعدادات والخصوصية</h2>
+        <p>تحكم كامل في الحساب، البيانات، الإشعارات، المظهر، وتفضيلات التعلّم.</p>
+      </div>
+      <div class="placeholder-box">
+        <p>هنا يمكن لاحقًا إضافة تبويبات:</p>
+        <ul>
+          <li>إعدادات الحساب (الاسم، البريد، كلمة المرور، اللغة).</li>
+          <li>الخصوصية والبيانات (من يمكنه رؤية ملفك، تنزيل بياناتك، مدة الاحتفاظ).</li>
+          <li>الإشعارات (بريد، SMS، تكرار التقارير).</li>
+          <li>الأمان (2FA، سجل الدخول، الجلسات النشطة).</li>
+          <li>المظهر (وضع داكن/فاتح، حجم الخط، الحركة، الوصول).</li>
+        </ul>
+      </div>
+      <!-- NEW: Settings interactive example -->
+      <div class="settings-layout">
+        <div class="settings-card">
+          <h3>🎛 مثال تفاعلي للإعدادات (UI فقط)</h3>
+          <div class="toggle-row">
+            <div>
+              <div class="toggle-label">حركة النيون في الخلفية</div>
+              <div class="toggle-description">
+                تحكم في حركة الأضواء النيونية لتجربة أكثر ديناميكية أو أكثر هدوءًا.
+              </div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggleNeonAnimation" checked>
+              <span class="slider-switch"></span>
+            </label>
+          </div>
+          <div class="toggle-row">
+            <div>
+              <div class="toggle-label">وضع تقليل الحركة (Accessibility)</div>
+              <div class="toggle-description">
+                يوقف معظم الحركات والانتقالات البصرية لتجربة مناسبة للحساسية البصرية.
+              </div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggleReducedMotion">
+              <span class="slider-switch"></span>
+            </label>
+          </div>
+          <div class="toggle-row">
+            <div>
+              <div class="toggle-label">تفعيل إشعارات التقدم المهاري</div>
+              <div class="toggle-description">
+                إشعارات أسبوعية عن التقدم في الدورات والمسارات (مثال واجهة فقط).
+              </div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="toggleMockNotifications" checked>
+              <span class="slider-switch"></span>
+            </label>
+          </div>
+          <p class="settings-note">
+            كل هذه الإعدادات تجريبية فقط داخل هذا النموذج، ولا يتم حفظ أي بيانات حقيقية.
+          </p>
+        </div>
+        <div class="settings-card">
+          <h3>🔐 مثال على ملخص الخصوصية</h3>
+          <p style="font-size:0.82rem;color:var(--text-secondary);">
+            يوضح هذا النموذج كيف يمكن للمنصة أن تلخّص إعدادات الخصوصية للمستخدم في بطاقة واحدة:
+          </p>
+          <ul style="font-size:0.82rem;color:var(--text-secondary);padding-right:1rem;margin-top:0.4rem;">
+            <li>❖ بيانات التقييم المهاري تُخزَّن بشكل مشفّر ولا تُشارك مع أصحاب عمل إلا بموافقتك.</li>
+            <li>❖ يمكنك طلب حذف كامل لجينومك المهاري في أي وقت.</li>
+            <li>❖ تُستخدم بياناتك المجهولة الهوية لتحسين نماذج التوصية فقط.</li>
+          </ul>
+          <p class="settings-note">
+            يمكن للحكام تجربة تبديل الإعدادات في البطاقة الأولى لتخيّل كيف سيشعر المستخدم بالتحكم الكامل
+            في تجربته دون الحاجة لتسجيل الدخول في هذا النموذج.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+<script>
+  // Simple section navigation
+  const navButtons = document.querySelectorAll('[data-target]');
+  const sections = document.querySelectorAll('main section');
+  function showSection(id) {
+    sections.forEach(sec => {
+      sec.classList.toggle('active-section', sec.id === id);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  navButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-target');
+      if (target) showSection(target);
+    });
+  });
+  // Simple stat counters animation
+  const counters = document.querySelectorAll('[data-counter]');
+  const options = { threshold: 0.4 };
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const targetVal = parseInt(el.getAttribute('data-counter'), 10);
+        let start = 0;
+        const duration = 1200;
+        const startTime = performance.now();
+        function animate(time) {
+          const progress = Math.min((time - startTime) / duration, 1);
+          const value = Math.floor(progress * targetVal);
+          el.textContent = targetVal >= 1000 ? "+" + value.toLocaleString("en-US") : value;
+          if (progress < 1) requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+        obs.unobserve(el);
+      }
+    });
+  }, options);
+  counters.forEach(c => observer.observe(c));
+  // ================== NEW: Skills Genome State ==================
+  const skillsDefinition = [
+    { id: 'logic', label: 'التفكير التحليلي' },
+    { id: 'comm', label: 'التواصل' },
+    { id: 'lead', label: 'القيادة والتأثير' },
+    { id: 'tech', label: 'المهارات التقنية (Digital)' },
+    { id: 'adapt', label: 'التكيّف والمرونة' },
+    { id: 'learn', label: 'التعلّم المستمر' }
+  ];
+  // Default genome (can be changed by sliders)
+  const skillGenome = {
+    logic: 65,
+    comm: 70,
+    lead: 55,
+    tech: 60,
+    adapt: 75,
+    learn: 80
+  };
+  const selectedSkills = new Set();
+  // ================== Assessment: bind sliders ==================
+  function syncAssessmentUI() {
+    skillsDefinition.forEach(skill => {
+      const input = document.getElementById('skill-' + skill.id);
+      const labelVal = document.getElementById('val-' + skill.id);
+      if (input && labelVal) {
+        input.value = skillGenome[skill.id];
+        labelVal.textContent = skillGenome[skill.id];
+      }
+    });
+    renderAssessmentSummary();
+  }
+  function setupAssessmentSliders() {
+    skillsDefinition.forEach(skill => {
+      const input = document.getElementById('skill-' + skill.id);
+      const labelVal = document.getElementById('val-' + skill.id);
+      if (!input || !labelVal) return;
+      input.addEventListener('input', () => {
+        labelVal.textContent = input.value;
+      });
+    });
+    const saveBtn = document.getElementById('btn-save-assessment');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        // Update genome from sliders
+        skillsDefinition.forEach(skill => {
+          const input = document.getElementById('skill-' + skill.id);
+          if (input) {
+            skillGenome[skill.id] = parseInt(input.value || '0', 10);
+          }
+        });
+        // Re-render all linked pages
+        renderAssessmentSummary();
+        updateDashboardFromGenome();
+        updateMarketFromGenome();
+        // Navigate to dashboard to "wow" judges
+        showSection('dashboard');
+      });
+    }
+  }
+  function renderAssessmentSummary() {
+    const container = document.getElementById('assessment-summary-list');
+    if (!container) return;
+    container.innerHTML = '';
+    skillsDefinition.forEach(skill => {
+      const score = skillGenome[skill.id];
+      const div = document.createElement('div');
+      div.className = 'summary-pill';
+      div.innerHTML = `
+        <span>${skill.label}</span>
+        <span class="score">${score}/100</span>
+      `;
+      container.appendChild(div);
+    });
+  }
+  // ================== Dashboard: Radar Chart ==================
+  let radarCtx = null;
+  function drawRadarChart() {
+    const canvas = document.getElementById('skillsRadar');
+    if (!canvas) return;
+    if (!radarCtx) radarCtx = canvas.getContext('2d');
+    const ctx = radarCtx;
+    const w = canvas.width;
+    const h = canvas.height;
+    ctx.clearRect(0, 0, w, h);
+    const centerX = w / 2;
+    const centerY = h / 2;
+    const radius = Math.min(w, h) * 0.32;
+    const levels = 4;
+    const angleStep = (Math.PI * 2) / skillsDefinition.length;
+    // Background grid
+    ctx.save();
+    ctx.translate(centerX, centerY);
+    for (let lvl = 1; lvl <= levels; lvl++) {
+      const r = (radius / levels) * lvl;
+      ctx.beginPath();
+      for (let i = 0; i < skillsDefinition.length; i++) {
+        const angle = angleStep * i - Math.PI / 2;
+        const x = Math.cos(angle) * r;
+        const y = Math.sin(angle) * r;
+        if (i === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.closePath();
+      ctx.strokeStyle = 'rgba(0, 224, 255, 0.18)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+    // Axes
+    for (let i = 0; i < skillsDefinition.length; i++) {
+      const angle = angleStep * i - Math.PI / 2;
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(Math.cos(angle) * radius, Math.sin(angle) * radius);
+      ctx.strokeStyle = 'rgba(0, 224, 255, 0.25)';
+      ctx.lineWidth = 0.8;
+      ctx.stroke();
+    }
+    // Labels
+    ctx.font = '11px system-ui';
+    ctx.fillStyle = '#B4C7E7';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    skillsDefinition.forEach((skill, i) => {
+      const angle = angleStep * i - Math.PI / 2;
+      const x = Math.cos(angle) * (radius + 18);
+      const y = Math.sin(angle) * (radius + 18);
+      ctx.fillText(skill.label, x, y);
+    });
+    // Data polygon
+    ctx.beginPath();
+    skillsDefinition.forEach((skill, i) => {
+      const val = Math.max(0, Math.min(100, skillGenome[skill.id]));
+      const r = (val / 100) * radius;
+      const angle = angleStep * i - Math.PI / 2;
+      const x = Math.cos(angle) * r;
+      const y = Math.sin(angle) * r;
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    });
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(0, 255, 240, 0.23)';
+    ctx.strokeStyle = 'rgba(0, 255, 240, 0.8)';
+    ctx.lineWidth = 2;
+    ctx.shadowColor = 'rgba(0, 255, 240, 0.8)';
+    ctx.shadowBlur = 12;
+    ctx.fill();
+    ctx.stroke();
+    ctx.restore();
+  }
+  function updateDashboardFromGenome() {
+    // Readiness score = average of skills
+    const total = skillsDefinition.reduce((sum, s) => sum + (skillGenome[s.id] || 0), 0);
+    const avg = Math.round(total / skillsDefinition.length);
+    const readinessValue = document.getElementById('readinessValue');
+    if (readinessValue) readinessValue.textContent = avg;
+    // Skills summary
+    const summaryList = document.getElementById('skillsSummaryList');
+    if (summaryList) {
+      summaryList.innerHTML = '';
+      skillsDefinition.forEach(skill => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span class="skill-badge-label">
+            <span class="skill-dot"></span>
+            <span>${skill.label}</span>
+          </span>
+          <span class="skill-score">${skillGenome[skill.id]}/100</span>
+        `;
+        summaryList.appendChild(li);
+      });
+    }
+    // Gaps: sort ascending by score, show 3 lowest
+    const sorted = [...skillsDefinition].sort((a, b) => skillGenome[a.id] - skillGenome[b.id]);
+    const gapsList = document.getElementById('gapsList');
+    if (gapsList) {
+      gapsList.innerHTML = '';
+      sorted.slice(0, 3).forEach(skill => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <span>${skill.label}</span>
+          <span class="gap-tag">هدف: رفعها إلى ${Math.min(100, skillGenome[skill.id] + 20)}+</span>
+        `;
+        gapsList.appendChild(li);
+      });
+    }
+    drawRadarChart();
+  }
+  // ================== Market suggestions ==================
+  const skillRecommendations = {
+    logic: [
+      {
+        title: 'دراسة جديدة غيرت مفهوم البرمجة',
+        meta: 'متقدم • 3 ساعات',
+        tags: ['Data Literacy', 'science']
+      },
+      {
+        title: 'التفكير النقدي وصنع القرار',
+        meta: 'مبتدئ • 6 ساعات',
+        tags: ['Critical Thinking', 'Problem Solving']
+      }
+    ],
+    comm: [
+      {
+        title: 'مهارات العرض والتقديم',
+        meta: 'متوسط • 8 ساعات',
+        tags: ['Presentation', 'Storytelling']
+      },
+      {
+        title: 'التواصل الفعال في الفرق الرقمية',
+        meta: 'مبتدئ • 5 ساعات',
+        tags: ['Remote Collaboration']
+      }
+    ],
+    lead: [
+      {
+        title: 'التعليم الإبداعي',
+        meta: 'سهل• 3 ساعات',
+        tags: ['Team Leadership', 'Coaching']
+      },
+      {
+        title: 'التأثير بدون منصب رسمي',
+        meta: 'متقدم • 7 ساعات',
+        tags: ['Influence', 'Stakeholders']
+      }
+    ],
+    tech: [
+      {
+        title: 'مفهوم الذكاء الاصطناعي الحديث',
+        meta: 'متقدم • 14 ساعة',
+        tags: ['Python', 'Data Analysis AI']
+      },
+      {
+        title: 'SQL لعلم البيانات',
+        meta: 'متوسط • 10 ساعات',
+        tags: ['SQL', 'Databases']
+      }
+    ],
+    adapt: [
+      {
+        title: 'العمل في بيئات سريعة التغير',
+        meta: 'مبتدئ • 4 ساعات',
+        tags: ['Adaptability', 'Resilience']
+      },
+      {
+        title: 'إدارة التغيير الشخصي والمهني',
+        meta: 'متوسط • 6 ساعات',
+        tags: ['Change Management']
+      }
+    ],
+    learn: [
+      {
+        title: 'تصميم خطة تعلّم شخصية',
+        meta: 'مبتدئ • 3 ساعات',
+        tags: ['Learning How to Learn']
+      },
+      {
+        title: 'بناء عادات تعلّم مستمرة',
+        meta: 'متوسط • 5 ساعات',
+        tags: ['Habits', 'Self-Development']
+      }
+    ]
+  };
+  function updateMarketFromGenome() {
+    const container = document.getElementById('marketRecommendations');
+    if (!container) return;
+    container.innerHTML = '';
+    // Identify 3 lowest skill dimensions
+    const sorted = [...skillsDefinition].sort((a, b) => skillGenome[a.id] - skillGenome[b.id]);
+    const weakest = sorted.slice(0, 3);
+    weakest.forEach(skill => {
+      const recs = skillRecommendations[skill.id] || [];
+      recs.forEach(rec => {
+        const card = document.createElement('div');
+        card.className = 'market-card';
+        card.innerHTML = `
+          <div class="market-card-title">${rec.title}</div>
+          <div class="market-card-meta">${skill.label} • ${rec.meta}</div>
+          <div class="market-tag-row">
+            ${rec.tags.map(t => `<span class="market-tag">${t}</span>`).join('')}
+          </div>
+          <button class="btn-small" style="font-size:0.75rem;padding:0.35rem 0.9rem;margin-top:0.1rem;">
+            أضف إلى مساري
+          </button>
+        `;
+        const btn = card.querySelector('button');
+        btn.addEventListener('click', () => {
+          addToSkillsBasket(rec.title, skill.label);
+        });
+        container.appendChild(card);
+      });
+    });
+  }
+  function addToSkillsBasket(skillTitle, dimensionLabel) {
+    const key = `${skillTitle}__${dimensionLabel}`;
+    if (selectedSkills.has(key)) return;
+    selectedSkills.add(key);
+    const list = document.getElementById('skillsBasketList');
+    if (!list) return;
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <span>${skillTitle}<span style="font-size:0.75rem;color:var(--text-muted);"> • ${dimensionLabel}</span></span>
+      <span class="basket-pill">ضمن المسار</span>
+    `;
+    list.appendChild(li);
+  }
+  // ================== Settings interactions ==================
+  function setupSettingsToggles() {
+    const neonToggle = document.getElementById('toggleNeonAnimation');
+    const reducedMotionToggle = document.getElementById('toggleReducedMotion');
+    if (neonToggle) {
+      neonToggle.addEventListener('change', () => {
+        document.querySelectorAll('.neon-orb').forEach(orb => {
+          if (neonToggle.checked) {
+            orb.classList.remove('neon-paused');
+          } else {
+            orb.classList.add('neon-paused');
+          }
+        });
+      });
+    }
+    if (reducedMotionToggle) {
+      reducedMotionToggle.addEventListener('change', () => {
+        if (reducedMotionToggle.checked) {
+          document.body.classList.add('reduced-motion');
+        } else {
+          document.body.classList.remove('reduced-motion');
+        }
+      });
+    }
+  }
+  // ================== Init on load ==================
+  window.addEventListener('DOMContentLoaded', () => {
+    syncAssessmentUI();
+    setupAssessmentSliders();
+    updateDashboardFromGenome();
+    updateMarketFromGenome();
+    setupSettingsToggles();
+  });
+</script>
+</body>
+</html>
