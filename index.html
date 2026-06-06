@@ -539,6 +539,126 @@ html[lang="en"] .timeline:before{right:auto;left:20px}
 html[lang="en"] .step{padding-right:0;padding-left:58px}
 html[lang="en"] .step:before{right:auto;left:8px}
 
+
+/* === V18 Premium Motion & Navigation Polish === */
+html{scroll-behavior:smooth}
+.navActions{position:relative}
+.navBtn,.primary,.ghost,.danger,.track,.modeCard,.course,.card,.languageOption,.answer{
+  will-change:transform,opacity,box-shadow,border-color;
+}
+.navBtn{
+  position:relative;
+  overflow:hidden;
+  transition:transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease, color .22s ease;
+}
+.navBtn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,214,201,.10)}
+.navBtn.activeNav{
+  border-color:rgba(0,214,201,.58);
+  background:linear-gradient(135deg,rgba(0,214,201,.16),rgba(155,92,255,.08));
+  color:#eaffff;
+  box-shadow:0 0 22px rgba(0,214,201,.16);
+}
+.navBtn.activeNav:after{
+  content:"";
+  position:absolute;
+  height:3px;
+  border-radius:999px;
+  left:14px;
+  right:14px;
+  bottom:4px;
+  background:linear-gradient(90deg,#00d6c9,#8e74ff);
+  box-shadow:0 0 12px rgba(0,214,201,.55);
+}
+button{position:relative;overflow:hidden}
+button .ripple{
+  position:absolute;
+  width:10px;height:10px;
+  border-radius:50%;
+  pointer-events:none;
+  background:rgba(255,255,255,.34);
+  transform:translate(-50%,-50%) scale(0);
+  animation:rippleMotion .62s ease-out forwards;
+}
+@keyframes rippleMotion{to{transform:translate(-50%,-50%) scale(24);opacity:0}}
+.pageTransition{
+  position:fixed;
+  inset:0;
+  z-index:9996;
+  pointer-events:none;
+  opacity:0;
+  background:radial-gradient(circle at 50% 20%,rgba(0,214,201,.14),rgba(7,16,31,.50));
+  transition:opacity .24s ease;
+}
+.pageTransition.active{opacity:1}
+.pageTransitionBar{
+  position:absolute;
+  top:0;
+  right:0;
+  height:3px;
+  width:0;
+  background:linear-gradient(90deg,#00d6c9,#8e74ff,#d6b56d);
+  box-shadow:0 0 18px rgba(0,214,201,.85);
+}
+.pageTransition.active .pageTransitionBar{animation:pageLoadBar .58s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes pageLoadBar{0%{width:0;opacity:.6}65%{width:78%;opacity:1}100%{width:100%;opacity:0}}
+main section{
+  opacity:0;
+  transform:translateY(16px) scale(.992);
+  filter:blur(6px);
+  transition:opacity .42s ease, transform .42s cubic-bezier(.2,.8,.2,1), filter .42s ease;
+}
+main section.active{
+  opacity:1;
+  transform:translateY(0) scale(1);
+  filter:blur(0);
+}
+main section.active .card,
+main section.active .track,
+main section.active .modeCard,
+main section.active .course,
+main section.active .kpi,
+main section.active .profileItem,
+main section.active .gapNode,
+main section.active .roadStep,
+main section.active .govItem{
+  animation:staggerIn .52s cubic-bezier(.2,.8,.2,1) both;
+}
+main section.active .card:nth-child(1){animation-delay:.03s}
+main section.active .card:nth-child(2){animation-delay:.08s}
+main section.active .card:nth-child(3){animation-delay:.13s}
+main section.active .track:nth-child(1), main section.active .modeCard:nth-child(1), main section.active .course:nth-child(1), main section.active .kpi:nth-child(1), main section.active .profileItem:nth-child(1){animation-delay:.04s}
+main section.active .track:nth-child(2), main section.active .modeCard:nth-child(2), main section.active .course:nth-child(2), main section.active .kpi:nth-child(2), main section.active .profileItem:nth-child(2){animation-delay:.08s}
+main section.active .track:nth-child(3), main section.active .course:nth-child(3), main section.active .kpi:nth-child(3), main section.active .profileItem:nth-child(3){animation-delay:.12s}
+main section.active .track:nth-child(4), main section.active .course:nth-child(4), main section.active .kpi:nth-child(4), main section.active .profileItem:nth-child(4){animation-delay:.16s}
+@keyframes staggerIn{
+  from{opacity:0;transform:translateY(14px) scale(.985);filter:blur(4px)}
+  to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+}
+.card:hover,.course:hover,.profileItem:hover,.kpi:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 44px rgba(0,0,0,.23),0 0 24px rgba(0,214,201,.08);
+}
+.primary,.ghost,.danger{
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+}
+.primary:hover,.ghost:hover,.danger:hover{transform:translateY(-2px)}
+.primary:active,.ghost:active,.danger:active,.navBtn:active{transform:translateY(0) scale(.985)}
+.bar span{transition:width .55s cubic-bezier(.2,.8,.2,1)}
+.answers .answer{
+  transition:transform .18s ease, border-color .22s ease, background .22s ease, box-shadow .22s ease;
+}
+.answers .answer:hover{transform:translateX(-3px);border-color:rgba(0,214,201,.42)}
+html[lang="en"] .answers .answer:hover{transform:translateX(3px)}
+.bigLogo,.logo{animation:logoBreath 4.8s ease-in-out infinite}
+@keyframes logoBreath{0%,100%{filter:drop-shadow(0 0 12px rgba(0,214,201,.10))}50%{filter:drop-shadow(0 0 22px rgba(0,214,201,.28))}}
+.modeCard.activeMode,.modeCard.unlocked{
+  animation:softGlow 3.5s ease-in-out infinite;
+}
+@keyframes softGlow{0%,100%{box-shadow:0 0 22px rgba(0,214,201,.08)}50%{box-shadow:0 0 34px rgba(0,214,201,.16)}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+
 </style>
 </head>
 <body>
@@ -563,7 +683,7 @@ html[lang="en"] .step:before{right:auto;left:8px}
 </div>
 <div class="app"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
 <header><div class="nav"><div class="brand"><div class="logo" aria-label="شعار المنصة"></div><div><h1>محرك الجينوم المهاري المتكيّف</h1><p>Adaptive Skills Engine — Professional MVP</p></div></div><div class="navActions"><button class="navBtn" onclick="go('home')">الرئيسية</button><button class="navBtn" onclick="go('gaps')">الفجوات</button><button class="navBtn" onclick="go('dashboard')">لوحة الجينوم</button><button class="navBtn" onclick="go('intelligence')">مركز التحليل</button><button class="navBtn" onclick="go('aiEngine')">محرك الذكاء</button><button class="navBtn" onclick="go('pathway')">المسار التدريبي</button><button class="navBtn" onclick="go('impact')">تقرير الأثر</button><button class="navBtn" onclick="go('tracker')">متابعة الدورات</button><button class="navBtn secondaryNav" onclick="go('dataSources')">مصادر البيانات</button><button class="navBtn secondaryNav" onclick="go('roadmap')">خارطة الطريق</button><button class="navBtn secondaryNav" onclick="go('governance')">الخصوصية</button><button class="navBtn secondaryNav" onclick="go('profile')">الملف الشخصي</button><button class="navBtn secondaryNav" onclick="toggleLanguage()">AR | EN</button><button class="danger" onclick="logout()">تسجيل خروج</button></div></div></header>
-<main>
+<div id="pageTransition" class="pageTransition"><div class="pageTransitionBar"></div></div><main>
 <section id="login" class="active">
   <div class="gridMain">
     <div class="card identityCard softReveal">
@@ -4164,11 +4284,27 @@ function hasUser(){ return !!(state.user_name && state.email); }
 function hasResults(){ return !!(state.submitted && state.mcq_submitted && state.advanced_submitted && state.records && state.records.length); }
 function mcqDone(){ return !!state.mcq_submitted; }
 function fullDiagnosticDone(){ return hasResults(); }
+function setActiveNav(id){
+  document.querySelectorAll('.navBtn').forEach(btn=>{
+    const onclick=btn.getAttribute('onclick')||'';
+    btn.classList.toggle('activeNav', onclick.includes(`go('${id}')`) || onclick.includes(`go("${id}")`));
+  });
+}
+function triggerPageTransition(){
+  const pt=document.getElementById('pageTransition');
+  if(!pt) return;
+  pt.classList.remove('active');
+  void pt.offsetWidth;
+  pt.classList.add('active');
+  setTimeout(()=>pt.classList.remove('active'),560);
+}
 function go(id){
   if(id!=='login' && !hasUser()){ id='login'; }
   const preFlow=['login','welcome','diagnosticMode','quiz','advancedDiagnostic'];
   document.body.classList.toggle('navHidden', preFlow.includes(id) || !fullDiagnosticDone());
+  triggerPageTransition();
   document.querySelectorAll('main section').forEach(s=>s.classList.toggle('active',s.id===id));
+  setActiveNav(id);
   window.scrollTo({top:0,behavior:'smooth'});
   try{
     if(id==='welcome') renderWelcome();
@@ -5003,7 +5139,19 @@ function askSkillGenomeAI(){
   ans.textContent=reply;
 }
 
-window.addEventListener('DOMContentLoaded',()=>{ showLanguageGateIfNeeded(); const langObserver=new MutationObserver(()=>{ if(window.__skillGenomeLang==='en') setTimeout(()=>translateDOMToEnglish(document.body),0); }); langObserver.observe(document.body,{childList:true,subtree:true,characterData:true}); populateLoginSelects(); load(); setTimeout(()=>{ const sp=document.getElementById('govSplash'); if(sp) sp.classList.add('hide'); },3800); if(hasUser()){ go(hasResults()?'home':'welcome'); } else go('login'); });
+window.addEventListener('DOMContentLoaded',()=>{ 
+  document.addEventListener('click',e=>{
+    const btn=e.target.closest('button');
+    if(!btn) return;
+    const r=btn.getBoundingClientRect();
+    const sp=document.createElement('span');
+    sp.className='ripple';
+    sp.style.left=(e.clientX-r.left)+'px';
+    sp.style.top=(e.clientY-r.top)+'px';
+    btn.appendChild(sp);
+    setTimeout(()=>sp.remove(),650);
+  });
+  showLanguageGateIfNeeded(); const langObserver=new MutationObserver(()=>{ if(window.__skillGenomeLang==='en') setTimeout(()=>translateDOMToEnglish(document.body),0); }); langObserver.observe(document.body,{childList:true,subtree:true,characterData:true}); populateLoginSelects(); load(); setTimeout(()=>{ const sp=document.getElementById('govSplash'); if(sp) sp.classList.add('hide'); },3800); if(hasUser()){ go(hasResults()?'home':'welcome'); } else go('login'); });
 </script>
 </body>
 </html>
